@@ -8,13 +8,6 @@
 
 4. Criar também um endpoint REST para exibir o número já calculado e até qual termo da série foi somado para obter aquele valor.
 
-## Build
-
-```bash
-npm install
-npm run build
-```
-
 ## Rodando a Aplicação
 
 Após clonar o repositório e realizar o _build_:
