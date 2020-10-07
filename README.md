@@ -10,9 +10,8 @@
 
 ## Rodando a Aplicação
 
-Após clonar o repositório e realizar o _build_:
-
 ```bash
+npm install
 npm run build
 npm prune --production
 npm run serve
