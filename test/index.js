@@ -33,7 +33,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/terms/0", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4, result.value);
+        assert.strictEqual(4, result.value);
         done();
       });
     });
@@ -43,7 +43,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/pi", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4, result.pi);
+        assert.strictEqual(4, result.pi);
         done();
       });
     });
@@ -53,7 +53,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/terms/1", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(-4 / 3, result.value);
+        assert.strictEqual(-4 / 3, result.value);
         done();
       });
     });
@@ -63,7 +63,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/pi", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4 + -4 / 3, result.pi);
+        assert.strictEqual(4 + -4 / 3, result.pi);
         done();
       });
     });
@@ -73,7 +73,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/terms/10", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4 / 21, result.value);
+        assert.strictEqual(4 / 21, result.value);
         done();
       });
     });
@@ -83,7 +83,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/pi", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4 + -4 / 3 + 4 / 21, result.pi);
+        assert.strictEqual(4 + -4 / 3 + 4 / 21, result.pi);
         done();
       });
     });
@@ -93,7 +93,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/terms/25", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(-4 / 51, result.value);
+        assert.strictEqual(-4 / 51, result.value);
         done();
       });
     });
@@ -103,7 +103,7 @@ describe("Term and Pi Validation", () => {
     http.get({ ...options, path: "/pi", method: "GET" }, (res) => {
       res.on("data", (data) => {
         const result = JSON.parse(data);
-        assert.equal(4 + -4 / 3 + 4 / 21 + -4 / 51, result.pi);
+        assert.strictEqual(4 + -4 / 3 + 4 / 21 + -4 / 51, result.pi);
         done();
       });
     });
@@ -119,7 +119,7 @@ describe("Term and Pi Validation", () => {
         res.on("data", (data) => {
           const result = JSON.parse(data);
           const terms = result.filter((term) => term.index === 50);
-          assert.equal(1, terms.length);
+          assert.strictEqual(1, terms.length);
           done();
         });
       });
